@@ -6,7 +6,7 @@ package ExceptionPkg;
 	// Importing I/O classes
 	import java.io.*;
 
-public class CheckExceptionExample {
+public class ThrowsExceptionExample {
 
 	
 		/**
@@ -22,20 +22,11 @@ public class CheckExceptionExample {
 		In checked exceptions, there are two types: fully checked and partially checked exceptions. 
 		A fully checked exception is a checked exception where all its child classes are also checked, like IOException, and InterruptedException. 
 		A partially checked exception is a checked exception where some of its child classes are unchecked, like an Exception.
-		
-		1. Checked exceptions: These are the exceptions that can be detected by the compiler at the time of execution of the program, and warning messages are displayed.
-		
-		
-		2. Unchecked Exceptions: These are the exceptions that are missed out from the compiler check giving birth to abrupt flow.
-		No warning messages are displayed as these exceptions are not detected by the compiler.
-		
-		https://www.geeksforgeeks.org/top-5-exceptions-in-java-with-examples/
-		
+		 * @throws IOException 
 		**/
-		public static void main(String[] args)
+		public static void main(String[] args) throws IOException
 		{
-			try
-			{
+			
 			// Reading file from path in local directory
 			//FileReader file = new FileReader("C:\\test\\a.txt");
 			
@@ -53,18 +44,7 @@ public class CheckExceptionExample {
 			// Closing file connections
 			// using close() method
 			fileInput.close();
-			} catch(FileNotFoundException fnf)
-			{
-				fnf.printStackTrace();	
-			} catch (IOException io) 
-			{
-				io.printStackTrace();
-			}
 			
-		}
-
-		private static void printStackTrace() {
-			// TODO Auto-generated method stub
 			
 		}
 	}
